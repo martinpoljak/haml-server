@@ -1,0 +1,2 @@
+#!/bin/sh
+shotgun ./application.rb -s thin

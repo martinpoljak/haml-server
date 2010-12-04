@@ -1,0 +1,6 @@
+#YAML 1.0
+
+bind: localhost
+port: 8084
+charset: utf-8
+format: html5
