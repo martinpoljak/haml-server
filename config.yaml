@@ -1,6 +1,34 @@
-#YAML 1.0
+#YAML
+
+##
+# Says to which address bind the listening.
+#
+# Default value:
+#   localhost
+#
 
 bind: localhost
+
+##
+# Says to which point bind the listening.
+#
+# Default value:
+#   8084
+
 port: 8084
-charset: utf-8
+
+##
+# Says which format use for output rendering.
+# It's fully compatible with HAML settings.
+#
+# Default value:
+#   html5
+#
+# Possible values:
+#   xhtml
+#   html4
+#   html5
+#
+
 format: html5
+
