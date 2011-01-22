@@ -6,11 +6,15 @@ require "sinatra"
 require "haml"
 require "yaml"
 
+##
 # Configures server
+#
+
 configure do
     
     # Setups paths
-    dir = File.dirname(__FILE__)
+ #   dir = File.dirname(__FILE__)
+    dir = "."
     set :views, dir.dup << "/pages"
     set :static, false
     set :dir, dir
@@ -38,6 +42,10 @@ configure do
     set :haml, {:format => settings.config[:format].to_sym }                        # default Haml format is :xhtml
     
 end
+
+##
+# Defines base helpers.
+#
 
 helpers do
 
@@ -72,13 +80,20 @@ helpers do
         end
     end
 
+    ##
     # Converts domain name to path in filesystem
+    # 
+    
     def domain_to_path(host)
         path = host.split(".")
         path.reverse! if path.length > 1
         path.join("/")    # returns
     end
 end
+
+##
+# Process request.
+#
 
 before do
 
